@@ -29,6 +29,18 @@ dependencies {
 
     // This dependency is used by the application.
     implementation(libs.guava)
+
+    // MCP SDK
+    implementation("io.modelcontextprotocol:kotlin-sdk:0.4.0")
+
+    // Kotlin IO
+    implementation("org.jetbrains.kotlinx:kotlinx-io-core:0.3.0")
+
+    // Ktor client for HTTP requests to Obsidian API
+    implementation("io.ktor:ktor-client-core:2.3.8")
+    implementation("io.ktor:ktor-client-cio:2.3.8")
+    implementation("io.ktor:ktor-client-content-negotiation:2.3.8")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.8")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -40,7 +52,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = "org.example.AppKt"
+    mainClass = "com.mcp.server.MainKt"
 }
 
 tasks.named<Test>("test") {
