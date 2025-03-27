@@ -41,6 +41,10 @@ dependencies {
     implementation("io.ktor:ktor-client-cio:2.3.8")
     implementation("io.ktor:ktor-client-content-negotiation:2.3.8")
     implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.8")
+
+    // Logging
+    implementation("io.github.microutils:kotlin-logging-jvm:3.0.5")
+    implementation("ch.qos.logback:logback-classic:1.4.14")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
@@ -52,7 +56,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = "com.mcp.server.MainKt"
+    mainClass = "com.mcp.server.AppKt"
 }
 
 tasks.named<Test>("test") {
